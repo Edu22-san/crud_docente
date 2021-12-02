@@ -48,7 +48,7 @@ class DocenteController extends Controller
         $docente = Docente::create($request->all());
 
         return redirect()->route('docentes.index')
-            ->with('success', 'Docente created successfully.');
+            ->with('success', 'Docente creado exitosamente');
     }
 
     /**
@@ -91,7 +91,7 @@ class DocenteController extends Controller
         $docente->update($request->all());
 
         return redirect()->route('docentes.index')
-            ->with('success', 'Docente updated successfully');
+            ->with('success', 'Docente actualizado exitosamente');
     }
 
     /**
@@ -104,6 +104,6 @@ class DocenteController extends Controller
         $docente = Docente::find($id)->delete();
 
         return redirect()->route('docentes.index')
-            ->with('success', 'Docente deleted successfully');
+            ->with('success', 'Docente eliminado exitosamente');
     }
 }

@@ -13,7 +13,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Docente</span>
+                        <span class="card-title" style="font-weight: bold;" >Crear Docente</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('docentes.store') }}"  role="form" enctype="multipart/form-data">

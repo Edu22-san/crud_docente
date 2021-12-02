@@ -33,12 +33,13 @@
         </div>
         <div class="form-group">
             {{ Form::label('fecha_nacimiento') }}
-            {{ Form::text('fecha_nacimiento', $docente->fecha_nacimiento, ['class' => 'form-control' . ($errors->has('fecha_nacimiento') ? ' is-invalid' : ''), 'placeholder' => 'Fecha Nacimiento']) }}
+            {{ Form::date('fecha_nacimiento', $docente->fecha_nacimiento, ['class' => 'form-control' . ($errors->has('fecha_nacimiento') ? ' is-invalid' : ''), 'placeholder' => 'Fecha Nacimiento']) }}
             {!! $errors->first('fecha_nacimiento', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 
     </div>
-    <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="box-footer mt-4">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a href="{{ route('docentes.index') }}" class="btn btn-danger "  data-placement="left">{{ __('Atras') }}</a>
     </div>
 </div>
